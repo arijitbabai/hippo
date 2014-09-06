@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:16
+-keep class com.arijit.pro.DisplayMessageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:8
+-keep class com.arijit.pro.MainActivity { <init>(...); }
+
+# onClick res/layout/main.xml #generated:14
+-keepclassmembers class * { *** sendMessage(...); }
+
