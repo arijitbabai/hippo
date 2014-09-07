@@ -2,6 +2,6 @@
 
 ant debug
 if [ $? -eq 0 ];
-    then adb install -r bin/pro-debug.apk;
+    then adb install -r bin/hipo-debug.apk;
     else  echo "build failed";
 fi
