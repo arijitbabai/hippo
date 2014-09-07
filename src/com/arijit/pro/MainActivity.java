@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.view.*;
 import android.app.ActionBar;
+import android.net.*;
+import android.content.Context;
 
 public class MainActivity extends Activity 
 {
@@ -26,5 +28,21 @@ public class MainActivity extends Activity
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+    }
+
+    public void checkNetwork(View view) {
+        String message;
+        /* Check the network connection */
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        if (networkInfo != null && networkInfo.isConnected()) {
+            message = "Connected! :D";
+        } else {
+            message = "Disconnected. :(";
+        }
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);   
     }
 }
