@@ -16,11 +16,11 @@
         <activity
                   android:name="com.arijit.pro.DisplayMessageActivity"
                   android:label="@string/title_activity_display_message"
-                  android:parentActivityName="com.arijit.pro.MainActivity" 
-                  android:theme="@android:style/Theme.Holo.Light">
-              <meta-data
-                  android:name="android.support.PARENT_ACTIVITY"
-                  android:value="com.arijit.pro.MainActivity" />
+                  android:theme="@android:style/Theme.Holo.Light"
+                  >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arijit.pro.MainActivity" />
         </activity>
     </application>
 </manifest>
