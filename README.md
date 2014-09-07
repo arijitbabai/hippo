@@ -1,6 +1,6 @@
 HIPPO
 ======
 
-1ST ANDROID APP
+A small android app built for learning purpose.
 
 
