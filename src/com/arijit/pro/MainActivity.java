@@ -25,8 +25,10 @@ public class MainActivity extends Activity
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
+        int left = editText.getWidth();
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra("left_position", left);
         startActivity(intent);
     }
 

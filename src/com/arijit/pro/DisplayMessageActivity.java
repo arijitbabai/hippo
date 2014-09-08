@@ -16,12 +16,15 @@ public class DisplayMessageActivity extends Activity  {
 
         // Get the message from the intent
         Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        int left = intent.getIntExtra("left_position", -1);
 
         // Create the text view
         TextView textView = new TextView(this);
         textView.setTextSize(40);
-        textView.setText(message);
+        textView.setText(message + "\n And left position is: " + left);
 
         // Set the text view as the activity layout
         setContentView(textView);
