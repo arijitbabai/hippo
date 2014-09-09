@@ -9,7 +9,7 @@
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
         <activity android:name="MainActivity"
                   android:label="@string/app_name"
-                  android:theme="@style/OrangeBar">
+                  android:theme="@style/BlueBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -18,7 +18,16 @@
         <activity
                   android:name="com.arijit.pro.DisplayMessageActivity"
                   android:label="@string/title_activity_display_message"
-                  android:theme="@style/OrangeBar"
+                  android:theme="@style/BlueBar"
+                  >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arijit.pro.MainActivity" />
+        </activity>
+        <activity
+                  android:name="com.arijit.pro.FlickrGallery"
+                  android:label="@string/title_activity_gallery"
+                  android:theme="@style/BlueBar"
                   >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
