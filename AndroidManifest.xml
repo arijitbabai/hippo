@@ -33,5 +33,5 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.arijit.pro.MainActivity" />
         </activity>
-    </application>
+      </application>
 </manifest>

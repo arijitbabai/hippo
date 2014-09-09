@@ -3,11 +3,16 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical" >
+    <TextView android:id="@+id/FlickrGalleryMessage"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Yeah a photo gallery! ^_^" />
+
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/flickr_gallery"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:columnWidth="120dp"
+        android:columnWidth="90dp"
         android:numColumns="auto_fit"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
