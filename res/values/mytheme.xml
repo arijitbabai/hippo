@@ -22,6 +22,11 @@
     <style name="BlueActionBar"
            parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">#6f9eb0</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
     </style>
 
+    <style name="MyActionBarTitleText"
+           parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/red</item>
+    </style>
 </resources>
