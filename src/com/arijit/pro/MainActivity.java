@@ -4,6 +4,7 @@ import android.app.Activity ;
 import android.os.Bundle;
 import android.content.*;
 import android.widget.EditText;
+import android.widget.Button;
 import android.view.*;
 import android.view.View;
 import android.app.ActionBar;
@@ -29,7 +30,6 @@ public class MainActivity extends Activity
         int left = editText.getWidth();
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
-        intent.putExtra("left_position", left);
         startActivity(intent);
     }
 
@@ -48,7 +48,6 @@ public class MainActivity extends Activity
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);   
     }
-
     
     /* Check charging status */ 
     public void batteryStatus(View view) { 
@@ -73,6 +72,26 @@ public class MainActivity extends Activity
             message = "Not Charging";
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         intent.putExtra(EXTRA_MESSAGE,message);
+        startActivity(intent);
+    }
+
+    public void getPosition(View view) {
+        String message;
+
+        /* get position of this button */
+        Button btn_pressed = (Button) findViewById(R.id.button_get_position);
+        int left = btn_pressed.getLeft();
+        int top = btn_pressed.getTop();
+
+        message = "The button position is: ("+ left + ", " + top + ")";
+
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    public void openGrid(View view) {        
+        Intent intent = new Intent(this, FlickrGallery.class);
         startActivity(intent);
     }
 }

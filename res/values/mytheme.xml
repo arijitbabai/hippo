@@ -3,12 +3,25 @@
     <!-- the theme applied to the application or activity -->
     <style name="OrangeBar"
            parent="@android:style/Theme.Holo.Light">
-        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarStyle">@style/OrangeActionBar</item>
     </style>
 
     <!-- ActionBar styles -->
-    <style name="MyActionBar"
+    <style name="OrangeActionBar"
            parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">#FCB356</item>
     </style>
+
+    <!-- the theme applied to the application or activity -->
+    <style name="BlueBar"
+           parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/BlueActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="BlueActionBar"
+           parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#6f9eb0</item>
+    </style>
+
 </resources>

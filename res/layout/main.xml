@@ -1,30 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-     >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp">
 
-    <EditText android:id="@+id/edit_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >            
+        <Button android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:layout_alignParentRight="true"
+            android:onClick="sendMessage" />
+        <EditText android:id="@+id/edit_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/send"
+            android:hint="@string/edit_message" />
+    </RelativeLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_send" 
-        android:onClick="sendMessage" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">  
+        <Button android:id="@+id/button_check_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_check_network"
+            android:onClick="checkNetwork" />
+        <Button
+            android:id="@+id/button_get_position"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button_check_network"
+            android:text="@string/button_get_position" 
+            android:onClick="getPosition" />
+    </RelativeLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+    <Button android:layout_gravity="end"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_check" 
-        android:onClick="checkNetwork" />
+        android:text="@string/button_open_grid" 
+        android:onClick="openGrid" />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/battery" 
         android:onClick="batteryStatus" />
+        
 </LinearLayout>
-

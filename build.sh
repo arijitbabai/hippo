@@ -2,6 +2,6 @@
 
 ant debug
 if [ $? -eq 0 ];
-    then adb install -r bin/hipo-debug.apk;
+    then adb uninstall com.arijit.pro && adb install bin/hipo-debug.apk;
     else  echo "build failed";
 fi
