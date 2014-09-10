@@ -2,12 +2,13 @@ package com.arijit.pro;
 
 import android.app.Activity ;
 import android.os.Bundle;
-import android.content.Intent;
+import android.content.*;
 import android.widget.EditText;
 import android.view.*;
+import android.view.View;
 import android.app.ActionBar;
 import android.net.*;
-import android.content.Context;
+import android.os.BatteryManager;
 
 public class MainActivity extends Activity 
 {
@@ -46,5 +47,32 @@ public class MainActivity extends Activity
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);   
+    }
+
+    
+    /* Check charging status */ 
+    public void batteryStatus(View view) { 
+        Context context = view.getContext();
+        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatus = context.registerReceiver(null, ifilter);
+
+        // Are we charging / charged?
+        int status = batteryStatus.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+        boolean isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING ||
+                             status == BatteryManager.BATTERY_STATUS_FULL;
+
+        // How are we charging?
+        int chargePlug = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+        boolean usbCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
+        boolean acCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_AC;
+
+        String message;
+        if(isCharging)
+            message = "Charging";
+        else
+            message = "Not Charging";
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE,message);
+        startActivity(intent);
     }
 }
