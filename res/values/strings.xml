@@ -3,12 +3,15 @@
     <string name="app_name">Hipo</string>
     <string name="edit_message"> Enter a message</string>
     <string name="button_send">Send</string>
-    <string name="battery">Battery</string>
+    <string name="button_check_battery">Battery</string>
     <string name="button_check_network">Check Netowrk</string>    
     <string name="button_get_position">Get Position</string>
-    <string name="button_open_grid">Flickr</string>
+    <string name="button_open_grid">Flickr</string>    
+    <string name="button_show_image">Picture</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>    
     <string name="title_activity_gallery">Flickr Photos</string>
+    <string name="title_activity_image">Image Viewer</string>
+
 </resources>

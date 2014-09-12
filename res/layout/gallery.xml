@@ -3,7 +3,7 @@
         android:id="@+id/flickr_gallery"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:columnWidth="90dp"
+        android:columnWidth="150dp"
         android:numColumns="auto_fit"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"

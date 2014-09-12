@@ -47,7 +47,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/battery" 
-        android:onClick="batteryStatus" />
+        android:text="@string/button_check_battery" 
+        android:onClick="batteryStatus" />    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_show_image" 
+        android:onClick="showImage" />
         
 </LinearLayout>

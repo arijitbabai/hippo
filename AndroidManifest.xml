@@ -23,6 +23,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.arijit.pro.MainActivity" />
+        </activity>        
+        <activity
+                  android:name="com.arijit.pro.ShowImage"
+                  android:label="@string/title_activity_image"
+                  android:theme="@style/BlueBar"
+                  >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arijit.pro.MainActivity" />
         </activity>
         <activity
                   android:name="com.arijit.pro.FlickrGallery"
