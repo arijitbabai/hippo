@@ -16,7 +16,6 @@ public class DisplayMessageActivity extends Activity  {
 
         // Get the message from the intent
         Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
 
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 

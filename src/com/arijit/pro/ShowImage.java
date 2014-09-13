@@ -15,29 +15,21 @@ public class ShowImage extends Activity  {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
 
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(getResources(), R.drawable.sample_0, options);
-        int imageHeight = options.outHeight;
-        int imageWidth = options.outWidth;
-        String imageType = options.outMimeType;
+        // BitmapFactory.Options options = new BitmapFactory.Options();
+        // options.inJustDecodeBounds = true;
+        // BitmapFactory.decodeResource(getResources(), R.drawable.sample_0, options);
+        // int imageHeight = options.outHeight;
+        // int imageWidth = options.outWidth;
+        // String imageType = options.outMimeType;
+        // int samplesize = calculateInSampleSize(options, 50, 50);
+        // options.inJustDecodeBounds = false;
+        // options.inSampleSize = samplesize;
 
-        int samplesize = calculateInSampleSize(options, 50, 50);
-
-        options.inJustDecodeBounds = false;
-        options.inSampleSize = samplesize;
-        Bitmap myimage = BitmapFactory.decodeResource(getResources(), R.drawable.sample_0, options);
-
-
-
-        // // Create the text view
-        // TextView textView = new TextView(this);
-        // textView.setTextSize(40);
-        // textView.setText("type: " + imageType + "\nwidth: " 
-        //                 + imageWidth + "\nheight: " + imageHeight
-        //                 + "\n intsample: "  + samplesize);
-
+        // Get the image to display
+        long photo_id = intent.getLongExtra("photo_id", -1);
+        Bitmap myimage = BitmapFactory.decodeResource(getResources(), (int)photo_id, null);
 
         // Cteate the Image view
         ImageView mImageView = new ImageView(this);

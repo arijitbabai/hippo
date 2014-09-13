@@ -94,9 +94,4 @@ public class MainActivity extends Activity
         Intent intent = new Intent(this, FlickrGallery.class);
         startActivity(intent);
     }
-
-    public void showImage(View view) {
-        Intent intent = new Intent(this, ShowImage.class);
-        startActivity(intent);
-    }
 }

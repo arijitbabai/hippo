@@ -31,7 +31,7 @@
                   >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.arijit.pro.MainActivity" />
+                android:value="com.arijit.pro.FlickrGallery" />
         </activity>
         <activity
                   android:name="com.arijit.pro.FlickrGallery"

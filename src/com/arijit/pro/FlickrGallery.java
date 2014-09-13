@@ -16,9 +16,8 @@ public class FlickrGallery extends Activity  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        // Get the message from the intent
-        Intent intent = getIntent();
-        
+        final Activity that = this;
+
         // Set layout
         setContentView(R.layout.gallery);
 
@@ -27,8 +26,11 @@ public class FlickrGallery extends Activity  {
         flickr_gallery.setAdapter(new ImageAdapter(this));
 
         flickr_gallery.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText(FlickrGallery.this, "" + position, Toast.LENGTH_SHORT).show();
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {                
+                Intent intent = new Intent(that, ShowImage.class);
+                intent.putExtra("photo_id", id);
+                startActivity(intent);
             }
         });
 
@@ -47,10 +49,6 @@ public class FlickrGallery extends Activity  {
         return super.onOptionsItemSelected(item);
     }
 
-    public void goHome(View view) {
-        NavUtils.navigateUpFromSameTask(this);
-    }
-
     public class ImageAdapter extends BaseAdapter {
         private Context mContext;
 
@@ -66,8 +64,9 @@ public class FlickrGallery extends Activity  {
             return null;
         }
 
+        @Override
         public long getItemId(int position) {
-            return 0;
+            return mThumbIds[position];
         }
 
         // create a new ImageView for each item referenced by the Adapter
