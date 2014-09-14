@@ -3,8 +3,7 @@ package com.arijit.pro;
 import android.app.Activity ;
 import android.os.Bundle;
 import android.content.*;
-import android.widget.EditText;
-import android.widget.Button;
+import android.widget.*;
 import android.view.*;
 import android.view.View;
 import android.app.ActionBar;
@@ -93,5 +92,9 @@ public class MainActivity extends Activity
     public void openGrid(View view) {        
         Intent intent = new Intent(this, FlickrGallery.class);
         startActivity(intent);
+    }
+
+    public void showToast(View view){        
+        Toast.makeText(MainActivity.this, "hello", Toast.LENGTH_SHORT).show();
     }
 }

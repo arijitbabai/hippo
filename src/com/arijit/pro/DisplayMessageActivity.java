@@ -28,7 +28,8 @@ public class DisplayMessageActivity extends Activity  {
         setContentView(textView);
 
         // Insert the back button 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionbar = getActionBar();
+        actionbar.setDisplayHomeAsUpEnabled(true);
 
     }
 
